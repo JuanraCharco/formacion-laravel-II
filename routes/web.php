@@ -16,8 +16,12 @@ use Illuminate\Http\RedirectResponse;
 |
 */
 
-Route::get('/', function () {
-    return redirect('products');
-});
+Route::resource('products', ProductController::class)->middleware('auth');
 
-Route::resource('products', ProductController::class);
+Auth::routes();
+
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+

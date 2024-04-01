@@ -24,9 +24,9 @@ DB_PASSWORD="Pass#12345"
 ````
 docker compose up -d
 ````
-### Crear alias para el contenedor ````formacion-laravel-II-php-1````
+### Crear alias para el contenedor ````formacion-laravel-ii-php-1````
 ````
-alias dr="docker exec -it formacion-laravel-II-php-1"
+alias dr="docker exec -it formacion-laravel-ii-php-1"
 ````
 ### Instalar paquetes de Laravel
 ````

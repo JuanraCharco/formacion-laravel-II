@@ -4,7 +4,7 @@
 `````
 git clone https://github.com/JuanraCharco/formacion-laravel-II.git
 
-cd formacion-laravel-I
+cd formacion-laravel-II
 `````
 ### Configuración de variables de entorno
 ````

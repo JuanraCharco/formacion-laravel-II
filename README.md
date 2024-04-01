@@ -51,3 +51,13 @@ dr php artisan optimize:clear
 dr npm install
 dr npm run dev
 ````
+
+## Integración de la plantilla [AdminLTE](https://adminlte.io/themes/v3/) usando el repositorio [jeroennoten/laravel-adminlte](https://github.com/jeroennoten/Laravel-AdminLTE)
+### Instalación
+````
+dr composer require jeroennoten/laravel-adminlte
+dr composer require laravel/ui
+dr php artisan ui bootstrap –-auth
+dr php artisan adminlte:install --type=full --with=main_views --force
+````
+### Configuración

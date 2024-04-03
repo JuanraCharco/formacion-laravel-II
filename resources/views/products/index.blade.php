@@ -1,4 +1,10 @@
-@extends('products.layout')
+@extends('adminlte::page')
+
+@section('title', 'AdminLTE')
+
+@section('content_header')
+    <h1 class="m-0 text-dark"><i class="fas fa-circle"></i> Products</h1>
+@stop
 
 @section('content')
     <div class="row">
@@ -26,27 +32,24 @@
             <th width="280px">Action</th>
         </tr>
         @foreach ($products as $product)
-        <tr>
-            <td>{{ $product->id }}</td>
-            <td>{{ $product->name }}</td>
-            <td>{{ $product->detail }}</td>
-            <td>
-                <form action="{{ route('products.destroy',$product->id) }}" method="POST">
+            <tr>
+                <td>{{ $product->id }}</td>
+                <td>{{ $product->name }}</td>
+                <td>{{ $product->detail }}</td>
+                <td>
+                    <form action="{{ route('products.destroy',$product->id) }}" method="POST">
 
-                    <a class="btn btn-info" href="{{ route('products.show',$product->id) }}">Show</a>
+                        <a class="btn btn-info" href="{{ route('products.show',$product->id) }}">Show</a>
 
-                    <a class="btn btn-primary" href="{{ route('products.edit',$product->id) }}">Edit</a>
+                        <a class="btn btn-primary" href="{{ route('products.edit',$product->id) }}">Edit</a>
 
-                    @csrf
-                    @method('DELETE')
+                        @csrf
+                        @method('DELETE')
 
-                    <button type="submit" class="btn btn-danger">Delete</button>
-                </form>
-            </td>
-        </tr>
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+                </td>
+            </tr>
         @endforeach
     </table>
-
-
-
-@endsection
+@stop

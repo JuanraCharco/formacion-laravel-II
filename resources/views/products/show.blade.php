@@ -1,5 +1,11 @@
-@extends('products.layout')
-  
+@extends('adminlte::page')
+
+@section('title', 'AdminLTE')
+
+@section('content_header')
+    <h1 class="m-0 text-dark">Products</h1>
+@stop
+
 @section('content')
     <div class="row">
         <div class="col-lg-12 margin-tb">
@@ -11,7 +17,7 @@
             </div>
         </div>
     </div>
-   
+
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
@@ -26,4 +32,4 @@
             </div>
         </div>
     </div>
-@endsection
+@stop
